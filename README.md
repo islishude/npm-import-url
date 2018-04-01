@@ -35,7 +35,7 @@ git://github.com/npm/npm.git#v1.0.27
 }
 ```
 
-## 使用本地模块
+## 使用本地包
 
 `require` 引用当前项目的其它文件需要使用相对路径的地址，如果层级关系太多，就会写很多 `../`，有一种本地包的方式可以很好的解决。
 
@@ -55,7 +55,9 @@ git://github.com/npm/npm.git#v1.0.27
 
 `dependencies` 中的字段就是相应包中定义的名称。
 
-## REF
+## 参考
 
 - https://docs.npmjs.com/files/package.json#urls-as-dependencies
+
+## 示例
 - https://github.com/isLishude/npm-import-url
