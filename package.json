@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "helper": "file:helper"
+    "local-helper": "file:helper",
+    "random.ts": "git+https://github.com/isLishude/random.ts.git#semver:2.0.0",
+    "simple-node-promisify": "github:islishude/promisify"
   }
 }
