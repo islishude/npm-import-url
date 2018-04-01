@@ -1,6 +1,6 @@
 除了使用 npmjs.com 这个集中包托管网站，npm 还可以使用 Git 和本地包来安装。
 
-## 使用 Git 包 
+## 使用 Git 包
 
 官方在文档里定义的 git url 的格式是 `<protocol>://[<user>[:<password>]@]<hostname>[:<port>][:][/]<path>[#<commit-ish> | #semver:<semver>]`
 
@@ -16,9 +16,9 @@
     "random.ts": "git+https://github.com/isLishude/random.ts.git#semver:^2.0.0",
     // branch
     "random.ts": "git+ssh://git@github.com/isLishude/random.ts.git#dev",
-     // master
+    // master
     "random.ts": "git+ssh://git@github.com/isLishude/random.ts.git",
-     // commit-ish
+    // commit-ish
     "random.ts": "git+ssh://git@github.com/isLishude/random.ts.git#9d22109491"
 }
 ```
@@ -50,7 +50,9 @@
 ```
 
 ## 示例
-- https://github.com/isLishude/npm-import-url
+
+* https://github.com/isLishude/npm-import-url
 
 ## 参考
-- https://docs.npmjs.com/files/package.json#urls-as-dependencies
+
+* https://docs.npmjs.com/files/package.json#urls-as-dependencies
