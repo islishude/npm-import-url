@@ -11,7 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "local-helper": "file:helper",
-    "random.ts": "git+https://github.com/isLishude/random.ts.git#semver:2.0.0",
-    "simple-node-promisify": "github:islishude/promisify"
+    "got": "git+https://github.com/sindresorhus/got.git#semver:9.0.0"
   }
 }
