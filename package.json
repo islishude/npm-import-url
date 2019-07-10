@@ -11,6 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "local-helper": "file:helper",
-    "got": "git+https://github.com/sindresorhus/got.git#semver:9.0.0"
+    "wallet-rpc": "git+https://github.com/islishude/wallet-rpc.git#semver:6.0.0"
   }
 }
