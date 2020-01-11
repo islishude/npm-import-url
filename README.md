@@ -1,6 +1,6 @@
 除了使用 npmjs.com 这个集中包托管网站，npm 还可以使用 Git 和本地包来安装。
 
-## 使用 Git 包
+## 使用Git包
 
 官方在文档里定义的 git url 的格式是 `<protocol>://[<user>[:<password>]@]<hostname>[:<port>][:][/]<path>[#<commit-ish> | #semver:<semver>]`
 
@@ -24,6 +24,35 @@
 ```
 
 如果是 GitHub 的话更简单了，安装命令直接使用 `npm install username/repository` 就可以了，也可以使用 branch 以及 semver 等。
+
+## 使用私有仓库包
+
+如果当前包为私有仓库包，可以使用 git+https 的方式，如果你是 github 需要在[此页面](https://github.com/settings/tokens/new)申请访问令牌，并选择 scope 至少为 repo 项，然后保存。
+
+在家目录新建 [.netrc](https://ec.haxx.se/usingcurl/usingcurl-netrc) 文件，并按照下面格式写入数据：
+
+```
+machine github.com
+login YOUR_GITHUB_NAME
+password YOUR_ACCESS_TOKEN
+```
+
+如果需要先测试效果，可以在本地这样使用，主要更改的地方是 machine 换成了 `api.github.com`，使用 api 来获取私有仓库信息。
+
+```
+machine api.github.com
+login YOUR_GITHUB_NAME
+password YOUR_ACCESS_TOKEN
+```
+
+这样我们就可以使用 curl 先测试一下，如果返回 200 则正常。
+
+```console
+$ curl -I -n https://api.github.com/repos/:YOUR_GITHUB_NAME/:YOUR_PRIVATE_REPO
+HTTP/1.1 200 OK
+```
+
+之后就可以按照上述 [使用Git包](#使用Git包)方式来做。
 
 ## 使用本地包
 
